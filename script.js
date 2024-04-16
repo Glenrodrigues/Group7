@@ -1,8 +1,4 @@
 window.onload = function() {
-    var heading = document.getElementById('heading');
-    
-    var textInput = document.getElementById('textInput');
-    var textButton = document.getElementById('textButton');
     var basicCommands = document.getElementById('basicCommands');
     var branchingCommands = document.getElementById('branchingCommands');
 
@@ -21,7 +17,8 @@ window.onload = function() {
         { command: 'git checkout branch_name', description: 'Switch to a branch.' },
         { command: 'git merge branch_name', description: 'Merge a branch into the current branch.' },
     ];
-    var fewmoregitCommands = [
+  
+    var newCommands = [
         { command: 'git log', description: 'View the commit history.' },
         { command: 'git diff', description: 'View changes to files.' },
         { command: 'git clone', description: 'Clone a repository into a new directory.' },
@@ -29,8 +26,8 @@ window.onload = function() {
         { command: 'git tag',description: 'Create, list, delete or verify a tag object signed with GPG'},
         { command: 'git fetch',description: 'Download objects and refs from another repository'},
         { command: 'git rebase',description: 'Reapply commits on top of another base tip'},
-        {}
-    ]
+        
+    ];
 
     gitCommands.forEach(function(cmd) {
         var li = document.createElement('li');
@@ -44,4 +41,9 @@ window.onload = function() {
         branchingCommands.appendChild(li);
     });
 
+    newCommands.forEach(function(cmd) {
+        var li = document.createElement('li');
+        li.textContent = cmd.command + ': ' + cmd.description;
+        branchingCommands.appendChild(li);
+    });
 }
