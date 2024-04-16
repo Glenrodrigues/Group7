@@ -1,6 +1,6 @@
 window.onload = function() {
     var heading = document.getElementById('heading');
-    var colorButton = document.getElementById('colorButton');
+    
     var textInput = document.getElementById('textInput');
     var textButton = document.getElementById('textButton');
     var basicCommands = document.getElementById('basicCommands');
@@ -21,6 +21,16 @@ window.onload = function() {
         { command: 'git checkout branch_name', description: 'Switch to a branch.' },
         { command: 'git merge branch_name', description: 'Merge a branch into the current branch.' },
     ];
+    var fewmoregitCommands = [
+        { command: 'git log', description: 'View the commit history.' },
+        { command: 'git diff', description: 'View changes to files.' },
+        { command: 'git clone', description: 'Clone a repository into a new directory.' },
+        { command: 'git remote add origin', description: 'Add a remote repository.' },
+        { command: 'git tag',description: 'Create, list, delete or verify a tag object signed with GPG'},
+        { command: 'git fetch',description: 'Download objects and refs from another repository'},
+        { command: 'git rebase',description: 'Reapply commits on top of another base tip'},
+        {}
+    ]
 
     gitCommands.forEach(function(cmd) {
         var li = document.createElement('li');
@@ -34,11 +44,4 @@ window.onload = function() {
         branchingCommands.appendChild(li);
     });
 
-    colorButton.addEventListener('click', function() {
-        heading.style.color = heading.style.color === 'red' ? 'black' : 'red';
-    });
-
-    textButton.addEventListener('click', function() {
-        heading.textContent = textInput.value;
-    });
 }
