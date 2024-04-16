@@ -45,6 +45,6 @@ window.onload = function() {
     newCommands.forEach(function(cmd) {
         var li = document.createElement('li');
         li.textContent = cmd.command + ': ' + cmd.description;
-        branchingCommands.appendChild(li);
+        newCommands.appendChild(li);
     });
 }
