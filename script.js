@@ -1,7 +1,7 @@
 window.onload = function() {
     var basicCommands = document.getElementById('basicCommands');
     var branchingCommands = document.getElementById('branchingCommands');
-    var newCommands = document.getElementById('newCommands');
+    var newCommandsList = document.getElementById('newCommands');
 
     var gitCommands = [
         { command: 'git init', description: 'Initialize a new Git repository.' },
@@ -34,7 +34,7 @@ window.onload = function() {
         var li = document.createElement('li');
         li.textContent = cmd.command + ': ' + cmd.description;
         basicCommands.appendChild(li);
-    });
+    };
 
     gitBranchingCommands.forEach(function(cmd) {
         var li = document.createElement('li');
@@ -45,6 +45,6 @@ window.onload = function() {
     newCommands.forEach(function(cmd) {
         var li = document.createElement('li');
         li.textContent = cmd.command + ': ' + cmd.description;
-        newCommands.appendChild(li);
+        newCommandsList.appendChild(li);
     });
 }
