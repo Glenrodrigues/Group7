@@ -18,7 +18,7 @@ window.onload = function() {
         { command: 'git checkout branch_name', description: 'Switch to a branch.' },
         { command: 'git merge branch_name', description: 'Merge a branch into the current branch.' },
     ];
-    var newCommands = [
+    var gitnewCommands = [
         { command: 'git log', description: 'View the commit history.' },
         { command: 'git diff', description: 'View changes to files.' },
         { command: 'git clone', description: 'Clone a repository into a new directory.' },
@@ -40,7 +40,7 @@ window.onload = function() {
         branchingCommands.appendChild(li);
     });
 
-    newCommands.forEach(function(cmd) {
+    gitnewCommands.forEach(function(cmd) {
         var li = document.createElement('li');
         li.textContent = cmd.command + ': ' + cmd.description;
         newCommands.appendChild(li);
