@@ -1,6 +1,7 @@
 window.onload = function() {
     var basicCommands = document.getElementById('basicCommands');
     var branchingCommands = document.getElementById('branchingCommands');
+    var newCommands = document.getElementById('newCommands');
 
     var gitCommands = [
         { command: 'git init', description: 'Initialize a new Git repository.' },
